@@ -7,7 +7,7 @@
 
 </head>
 <body style="background-color: aliceblue;">
-           <img  src="/images/Icon.png" alt="" style="float:inline-start; height:200px; width: 200px;">
+           <img  src="../images/Icon.png" alt="" style="float:inline-start; height:200px; width: 200px;">
 
         <h1 style="text-align: center;"> <br><br><br><br><br><br> Sign Up </h1>
         
@@ -25,7 +25,8 @@
         
         <input type="radio" id="admin" name="role" value="admin" required>
         <label for="admin">Admin</label><br><br>
-        
+        <label for="phone">Phone Number:</label><br>
+        <input type="phone" id="phone" name="phone" pattern="[0-9]+" required>
         
         <div id="companyInput">
             <label for="company">Company Name:</label><br>
