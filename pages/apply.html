@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+</head>
+
+<body style="font-family: Arial; background:#f5f7fa; margin:0;">
+
+    <div style="width:700px; margin:auto; margin-top:40px; background:white; padding:30px; border:1px solid #ddd;">
+
+        <h2 style="text-align:center; color:#2da7c9;">Apply for Job</h2>
+
+        <form>
+
+            <label>Full Name</label><br>
+            <input type="text" required style="width:100%; padding:8px; margin:10px 0;"><br>
+
+            <label>Email</label><br>
+            <input type="email" required style="width:100%; padding:8px; margin:10px 0;"><br>
+
+            <label>Select Job</label><br>
+            <select style="width:100%; padding:8px; margin:10px 0;">
+                <option>Software Engineer</option>
+                <option>Data Analyst</option>
+                <option>UI/UX Designer</option>
+                <option>Project Manager</option>
+            </select><br>
+
+            <label>Years of Experience</label><br>
+            <input type="number" min="0" required style="width:100%; padding:8px; margin:10px 0;"><br>
+
+            <label>Cover Letter</label><br>
+            <textarea rows="4" style="width:100%; padding:8px; margin:10px 0;"></textarea><br>
+
+            <label>Upload CV</label><br>
+            <input type="file" required style="margin:10px 0;"><br><br>
+
+            <button onclick="alert('Application Submitted'); window.location.href='applied-jobs.html'; return false;"
+                style="background:#2da7c9; color:white; border:none; padding:10px 15px; cursor:pointer;">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
