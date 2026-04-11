@@ -7,49 +7,7 @@
     <link rel="stylesheet" href="../styles/add-job.css">
 </head>
 <body>
-    <script>
-        function validateForm(event) {
-            // Get all form fields
-            const jobTitle = document.getElementById('jobTitle').value.trim();
-            const company = document.getElementById('company').value.trim();
-            const location = document.getElementById('location').value.trim();
-            const salary = document.getElementById('salary').value.trim();
-            
-            // Check if any required field is empty
-            if (!jobTitle) {
-                alert('Job Title is mandatory!');
-                event.preventDefault();
-                return false;
-            }
-            
-            if (!company) {
-                alert('Company Name is mandatory!');
-                event.preventDefault();
-                return false;
-            }
-            
-            if (!location) {
-                alert('Location is mandatory!');
-                event.preventDefault();
-                return false;
-            }
-            
-            if (!salary) {
-                alert('Salary is mandatory and must be a number!');
-                event.preventDefault();
-                return false;
-            }
 
-              if (isNaN(salary) || salary <= 0) {
-                alert('Salary must be a valid positive number!');
-                event.preventDefault();
-                return false;
-            }
-        
-            alert('Job added successfully!');
-            return true;
-        }
-    </script>
 <form method="post" onsubmit="return validateForm(event)">
     <h2 style = "text-align: center; color: rgba(45, 167, 201, 0.89); font-weight: 500;  border-bottom: 2px solid #e9ecef; padding-bottom: 1rem;">Add Job</h2>
     <label for="jobTitle">Job Title: <span style="color: red;">*</span></label><br>
@@ -76,6 +34,7 @@
     <input type="submit" value="Submit" >
 </form>
 
+<script src="../scripts/add-job.js"></script>
 
 </body>
 </html>
