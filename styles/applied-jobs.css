@@ -1,11 +1,11 @@
-/* الأساسيات */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f5f7fa;
 }
 
-/* الحاوية الرئيسية */
+
 .container {
     width: 90%;
     max-width: 1000px;
@@ -13,7 +13,7 @@ body {
     padding: 40px;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* إضافة ظل خفيف لشكل عصري */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -21,7 +21,7 @@ h2 {
     color: #2da7c9;
 }
 
-/* تنسيق الجدول */
+
 table {
     width: 100%;
     margin-top: 20px;
@@ -47,12 +47,10 @@ th {
     font-weight: bold;
 }
 
-/* التأثير عند مرور الماوس على الصفوف */
 tbody tr:hover {
     background-color: #f9f9f9;
 }
 
-/* ألوان حالة الطلب */
 .status-pending {
     color: orange;
     font-weight: bold;
@@ -73,7 +71,6 @@ tbody tr:hover {
     font-weight: bold;
 }
 
-/* روابط الأكشن */
 .action-link {
     color: #2da7c9;
     text-decoration: none;
@@ -85,7 +82,6 @@ tbody tr:hover {
     color: #248ea8;
 }
 
-/* في حالة عدم وجود بيانات */
 .no-data {
     text-align: center;
     color: #888;
