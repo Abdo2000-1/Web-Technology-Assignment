@@ -5,47 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply for Job</title>
+    <link rel="stylesheet" href="../styles/apply.css">
 </head>
 
 <body style="font-family: Arial; background:#f5f7fa; margin:0;">
 
-    <div style="width:700px; margin:auto; margin-top:40px; background:white; padding:30px; border:1px solid #ddd;">
+    <div class="container">
+        <h2>Apply for Job</h2>
 
-        <h2 style="text-align:center; color:#2da7c9;">Apply for Job</h2>
+        <form id="job-form" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+                <div class="error-msg" id="name-error">Full name is required.</div>
+            </div>
 
-        <form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com">
+                <div class="error-msg" id="email-error">Please enter a valid email address.</div>
+            </div>
 
-            <label>Full Name</label><br>
-            <input type="text" required style="width:100%; padding:8px; margin:10px 0;"><br>
+            <div class="form-group">
+                <label for="jobTitle">Select Job</label>
+                <select id="jobTitle">
+                    <option value="" disabled selected>-- Select a Position --</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Marketing Specialist">Marketing Specialist</option>
+                </select>
+                <div class="error-msg" id="job-error">Please select a job position.</div>
+            </div>
 
-            <label>Email</label><br>
-            <input type="email" required style="width:100%; padding:8px; margin:10px 0;"><br>
+            <div class="form-group">
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" min="0" placeholder="e.g. 2">
+                <div class="error-msg" id="exp-error">Please enter valid years of experience.</div>
+            </div>
 
-            <label>Select Job</label><br>
-            <select style="width:100%; padding:8px; margin:10px 0;">
-                <option>Software Engineer</option>
-                <option>Data Analyst</option>
-                <option>UI/UX Designer</option>
-                <option>Project Manager</option>
-            </select><br>
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter</label>
+                <textarea id="coverLetter" rows="4" placeholder="Briefly describe why you are a good fit..."></textarea>
+            </div>
 
-            <label>Years of Experience</label><br>
-            <input type="number" min="0" required style="width:100%; padding:8px; margin:10px 0;"><br>
 
-            <label>Cover Letter</label><br>
-            <textarea rows="4" style="width:100%; padding:8px; margin:10px 0;"></textarea><br>
+            <div class="upload-box" id="uploadBox">
+                <label for="fileInput">Upload Resume</label>
+                <p>Click to upload or drag and drop <small><ins>(PDF, DOCX up to 10MB)</ins></small></p>
+                
 
-            <label>Upload CV</label><br>
-            <input type="file" required style="margin:10px 0;"><br><br>
+                <input type="file" id="fileInput" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="error-msg" id="file-error">Please upload your resume.</div>
 
-            <button onclick="alert('Application Submitted'); window.location.href='applied-jobs.html'; return false;"
-                style="background:#2da7c9; color:white; border:none; padding:10px 15px; cursor:pointer;">
-                Submit Application
-            </button>
-
+            <button type="submit" class="submit-btn">Submit Application</button>
         </form>
-
     </div>
+
+    <div class="error-msg" id="name-error">Full name is required</div>
+
+    <script src="../scripts/apply.js"></script>
 
 </body>
 

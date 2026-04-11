@@ -1,0 +1,94 @@
+/* الأساسيات */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* إضافة ظل خفيف لشكل عصري */
+}
+
+h2 {
+    text-align: center;
+    color: #2da7c9;
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+caption {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+/* التأثير عند مرور الماوس على الصفوف */
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* ألوان حالة الطلب */
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-accepted {
+    color: green;
+    font-weight: bold;
+}
+
+.status-reviewed {
+    color: blue;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: bold;
+}
+
+/* روابط الأكشن */
+.action-link {
+    color: #2da7c9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+    color: #248ea8;
+}
+
+/* في حالة عدم وجود بيانات */
+.no-data {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}

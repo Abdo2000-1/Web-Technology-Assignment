@@ -1,0 +1,82 @@
+body {
+    font-family: Arial;
+    background: #f5f7fa;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #2da7c9;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #2da7c9;
+    background: #eef7fa;
+}
+
+/* نخفي input */
+.upload-box input {
+    display: none;
+}
+
+/* Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2da7c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #248ea8;
+}
+
+/* Error */
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
