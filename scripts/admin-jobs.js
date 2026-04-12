@@ -1,75 +1,73 @@
-// DELETE
-document.querySelectorAll(".delete-btn").forEach(btn => {
-    btn.addEventListener("click", function () {
+let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+let tableBody = document.getElementById("jobTableBody");
 
-        let row = this.parentElement.parentElement;
+function renderJobs() {
+    tableBody.innerHTML = "";
 
-        let confirmDelete = confirm("Are you sure you want to delete?");
-        if (confirmDelete) {
-            row.remove();
-        }
-    });
-});
+    jobs.forEach((job, index) => {
+        let row = document.createElement("tr");
 
-document.querySelectorAll(".edit-btn").forEach(btn => {
-    btn.addEventListener("click", function () {
+        row.innerHTML = `
+            <td>${job.jobTitle}</td>
+            <td>${job.company}</td>
+            <td>${job.location}</td>
+            <td>$${job.salary}</td>
+            <td>${job.status}</td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        `;
 
-        let row = this.parentElement.parentElement;
+        // DELETE
+        row.querySelector(".delete-btn").addEventListener("click", () => {
+            if (confirm("Are you sure?")) {
+                jobs.splice(index, 1);
+                localStorage.setItem("jobs", JSON.stringify(jobs));
+                renderJobs();
+            }
+        });
 
-        if (!this.classList.contains("editing")) {
+        // EDIT
+        row.querySelector(".edit-btn").addEventListener("click", function () {
 
-            for (let i = 0; i < row.children.length - 1; i++) {
-                let cell = row.children[i];
-                let text = cell.textContent;
+            if (!this.classList.contains("editing")) {
 
-                if (i === 3) {
-                    let cleanNumber = text.replace(/\D/g, "");
-                    cell.innerHTML = `<input type="number" value="${cleanNumber}">`;
-                }
+                let cells = row.children;
 
-                // status (index 4)
-                else if (i === 4) {
-                    let selected = text.trim().toLowerCase();
-                    cell.innerHTML = `
-                        <select>
-                            <option value="Open" ${selected === "open" ? "selected" : ""}>Open</option>
-                            <option value="Closed" ${selected === "closed" ? "selected" : ""}>Closed</option>
-                        </select>
-                    `;
-                }
+                cells[0].innerHTML = `<input value="${job.jobTitle}">`;
+                cells[1].innerHTML = `<input value="${job.company}">`;
+                cells[2].innerHTML = `<input value="${job.location}">`;
+                cells[3].innerHTML = `<input type="number" value="${job.salary}">`;
+                cells[4].innerHTML = `
+                    <select>
+                        <option value="open" ${job.status === "open" ? "selected" : ""}>Open</option>
+                        <option value="closed" ${job.status === "closed" ? "selected" : ""}>Closed</option>
+                    </select>
+                `;
 
-                else {
-                    cell.innerHTML = `<input value="${text}">`;
-                }
+                this.classList.add("editing");
+                this.textContent = "Save";
+
+            } else {
+
+                let cells = row.children;
+
+                job.jobTitle = cells[0].querySelector("input").value;
+                job.company = cells[1].querySelector("input").value;
+                job.location = cells[2].querySelector("input").value;
+                job.salary = cells[3].querySelector("input").value;
+                job.status = cells[4].querySelector("select").value;
+
+                localStorage.setItem("jobs", JSON.stringify(jobs));
+
+                renderJobs();
             }
 
-            this.classList.add("editing");
-            this.innerHTML = '<i class="fa-solid fa-check"></i>'; 
+        });
 
-        } else {
-
-            for (let i = 0; i < row.children.length - 1; i++) {
-                let cell = row.children[i];
-
-                if (i === 3) {
-                    let input = cell.querySelector("input");
-                    cell.textContent = "$" + input.value;
-                }
-
-                else if (i === 4) {
-                    let select = cell.querySelector("select");
-                    cell.textContent = select.value;
-                }
-
-                else {
-                    let input = cell.querySelector("input");
-                    cell.textContent = input.value;
-                }
-            }
-
-            this.classList.remove("editing");
-            this.innerHTML = '<i class="fa-solid fa-pen"></i>'; 
-        }
-
+        tableBody.appendChild(row);
     });
-});
+}
+
+renderJobs();
