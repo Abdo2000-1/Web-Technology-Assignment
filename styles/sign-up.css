@@ -112,3 +112,87 @@ button[type="submit"]:hover {
     background: #0f1722;
     transform: scale(0.99);
 }
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e1e3e4;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h1 a, h2 a, h3 a, .logo a, .footer-logo a ,.btn-login a, .btn-signup a {
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-left {
+   
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #0891b2;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link.active {
+    color: #0891b2;
+    font-weight: 600;
+    border-bottom: 2px solid #0891b2;
+    padding-bottom: 4px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-login {
+    background: none;
+    border: none;
+    color: #475569;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-signup {
+    background: linear-gradient(135deg, #00677f 0%, #2da7c9 100%);
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
