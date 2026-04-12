@@ -1,0 +1,56 @@
+body {
+font-family: Arial;
+background: #f5f7fa;
+margin: 0;
+}
+
+.container {
+width: 900px;
+margin: auto;
+padding: 40px;
+background: white;
+}
+
+h2 {
+text-align: center;
+color: #2da7c9;
+}
+
+.subtitle {
+text-align: center;
+color: #666;
+}
+
+.job {
+border: 1px solid #ddd;
+padding: 20px;
+margin-top: 20px;
+border-radius: 8px;
+}
+
+.open {
+color: green;
+}
+
+.closed {
+color: red;
+}
+
+.closed-text {
+color: #777;
+}
+
+.details-btn {
+color: #2da7c9;
+cursor: pointer;
+text-decoration: underline;
+margin-right: 10px;
+}
+
+.details {
+display: none;
+margin-top: 10px;
+background: #eef7fb;
+padding: 10px;
+border-radius: 5px;
+}
