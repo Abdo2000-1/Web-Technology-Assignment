@@ -44,6 +44,9 @@ input[type="text"], select, textarea {
     margin-bottom: 1.5rem; 
 }
 
+input#salary {
+    width: 100% !important;
+}
 
 ::placeholder {
     color: #adb5bd;
@@ -54,8 +57,18 @@ textarea#description {
     resize: vertical;
 }
 
+label[for="description"] + br + textarea + br {
+    display: none; 
+}
+
+textarea#description {
+    margin-bottom: 2rem;
+}
 
 input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: #148f99;
     color: white;
     border: none;
@@ -63,11 +76,18 @@ input[type="submit"] {
     border-radius: 20px;
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
     float: right; 
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 input[type="submit"]:hover {
     background-color: #0f7a83;
 }
 
-
+form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
