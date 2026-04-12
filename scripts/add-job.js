@@ -1,45 +1,41 @@
-function validateForm(event) {
+        function validateForm(event) {
+            // Get all form fields
+            const jobTitle = document.getElementById('jobTitle').value.trim();
+            const company = document.getElementById('company').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const salary = document.getElementById('salary').value.trim();
+            
+            // Check if any required field is empty
+            if (!jobTitle) {
+                alert('Job Title is mandatory!');
+                event.preventDefault();
+                return false;
+            }
+            
+            if (!company) {
+                alert('Company Name is mandatory!');
+                event.preventDefault();
+                return false;
+            }
+            
+            if (!location) {
+                alert('Location is mandatory!');
+                event.preventDefault();
+                return false;
+            }
+            
+            if (!salary) {
+                alert('Salary is mandatory and must be a number!');
+                event.preventDefault();
+                return false;
+            }
 
-
-   
-    const jobTitle = document.getElementById('jobTitle').value.trim();
-    const company = document.getElementById('company').value.trim();
-    const location = document.getElementById('location').value.trim();
-    const salary = document.getElementById('salary').value.trim();
-    const status = document.getElementById('status').value;
-    const description = document.getElementById('description').value.trim();
-
-
-    if (!jobTitle || !company || !location || !salary) {
-        alert('Please fill in all mandatory fields!');
-        return false;
-    }
-
-    if (isNaN(salary) || Number(salary) <= 0) {
-        alert('Salary must be a valid positive number!');
-        return false;
-    }
-
-
-    const newJob = {
-        id: Date.now(),
-        jobTitle,
-        company,
-        location,
-        salary,
-        status,
-        description,
-        dateAdded: new Date().toLocaleDateString()
-    };
-
-    
-    const existingJobs = JSON.parse(localStorage.getItem('jobs')) || [];
-
-    existingJobs.push(newJob);
-
-    localStorage.setItem('jobs', JSON.stringify(existingJobs));
-
-    alert('Job added successfully!');
-    
-    return true;
-}
+              if (isNaN(salary) || salary <= 0) {
+                alert('Salary must be a valid positive number!');
+                event.preventDefault();
+                return false;
+            }
+        
+            alert('Job added successfully!');
+            return true;
+        }

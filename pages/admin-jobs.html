@@ -10,24 +10,40 @@
     <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
-      <nav class="navbar">
+
+<nav class="Admin-navbar" id="Admin-Nav">
         <div class="nav-container">
             <div class="nav-left">
                 <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
-                <span class="logo"><a href="../start.html">LinkedOn</a></span>
+                <span class="logo"><a href="../homeAdmin.html">LinkedOn</a></span>
                 <div class="nav-links">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="../homeAdmin.html">Home</a>
                     <a class="nav-link" href="search.html">Search</a> 
                     <a class="nav-link" href="viewlist.html">View List</a>
-                    <a class="nav-link" href="admin-jobs.html">Edit and Delete Job</a>
+                    <a class="nav-link active" href="admin-jobs.html">Edit and Delete Job</a>
                     <a class="nav-link" href="add-job.html">Add Job</a>
 
                 </div>
             </div>
-            <div class="nav-right">
-                <button class="btn-login"><a href="sign-in.html">Login</a></button>
-                <button class="btn-signup"> <a href="sign-up.html">Sign Up</a> </button>
+
+        </div>
+    </nav>
+
+     <nav class="user-navbar" id="User-Nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
+                <span class="logo"><a href="../homeUser.html">LinkedOn</a></span>
+                <div class="nav-links">
+                    <a class="nav-link" href="../homeUser.html">Home</a>
+                    <a class="nav-link" href="search.html">Search</a> 
+                    <a class="nav-link active" href="viewlist.html">View List</a>
+                    <a class="nav-link" href="apply.html">Apply</a>
+                    <a class="nav-link" href="applied-jobs.html">My Applications</a>
+
+                </div>
             </div>
+
         </div>
     </nav>
     <div class="cards">
@@ -58,8 +74,7 @@
 
 </div>
 
-   <table border="1">
-    <thead>
+    <table border="1">     
         <tr>
             <th>Job Title</th>
             <th>Company</th>
@@ -68,11 +83,74 @@
             <th>Status</th>
             <th>Actions</th>
         </tr>
-    </thead>
+        <tr>
+            <td>Software Engineer</td>
+            <td>Tech Company</td>
+            <td>New York, NY</td>
+            <td>$100,000</td>
+            <td>Open</td>
+            <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+        <tr>
+            <td>Data Analyst</td>
+            <td>Data Corp</td>
+            <td>San Francisco, CA</td>
+            <td>$75,000</td>
+            <td>Open</td>
+            <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>        </tr>
+        <tr>
+    <td>Web Developer</td>
+    <td>Digital Solutions</td>
+    <td>London, UK</td>
+    <td>$85,000</td>
+    <td>Open</td>
+                <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+</tr>
 
-    <tbody id="jobTableBody">
+<tr>
+    <td>Cybersecurity Specialist</td>
+    <td>SecureTech</td>
+    <td>Berlin, Germany</td>
+    <td>$95,000</td>
+    <td>Closed</td>
+    <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+</tr>
 
-    </tbody>
-</table>
+<tr>
+    <td>Machine Learning Engineer</td>
+    <td>AI Labs</td>
+    <td>Toronto, Canada</td>
+    <td>$120,000</td>
+    <td>Open</td>
+    <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+</tr>
+
+<tr>
+    <td>System Administrator</td>
+    <td>Net Systems</td>
+    <td>Sydney, Australia</td>
+    <td>$70,000</td>
+    <td>Open</td>
+    <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+</tr>
+
+<tr>
+    <td>Mobile App Developer</td>
+    <td>App Innovations</td>
+    <td>Dubai, UAE</td>
+    <td>$90,000</td>
+    <td>Closed</td>
+    <td><button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
+</tr>
+    </table>
+    
+    <script src="../scripts/global.js"></script>
 </body>
 </html>

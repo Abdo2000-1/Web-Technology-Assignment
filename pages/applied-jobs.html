@@ -11,24 +11,42 @@
 <body>
 
 
-    <nav class="navbar">
+<nav class="Admin-navbar" id="Admin-Nav">
         <div class="nav-container">
             <div class="nav-left">
-                <span class="logo"><a href="../home.html">LinkedOn</a></span>
+                <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
+                <span class="logo"><a href="../homeAdmin.html">LinkedOn</a></span>
                 <div class="nav-links">
-                    <a class="nav-link" href="../home.html">Home</a>
+                    <a class="nav-link" href="../homeAdmin.html">Home</a>
                     <a class="nav-link" href="search.html">Search</a> 
-                    <a class="nav-link" href="view-list.html">View List</a>
-                    <a class="nav-link" href="apply.html">Apply</a>
-                    <a class="nav-link active" href="applied-jobs.html">My Apps</a>
+                    <a class="nav-link active" href="viewlist.html">View List</a>
+                    <a class="nav-link" href="admin-jobs.html">Edit and Delete Job</a>
+                    <a class="nav-link" href="add-job.html">Add Job</a>
+
                 </div>
             </div>
-            <div class="nav-right">
-                <button class="btn-login"><a href="sign-in.html">Login</a></button>
-                <button class="btn-signup"> <a href="sign-up.html">Sign Up</a> </button>
-            </div>
+
         </div>
     </nav>
+
+     <nav class="user-navbar" id="User-Nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
+                <span class="logo"><a href="../homeUser.html">LinkedOn</a></span>
+                <div class="nav-links">
+                    <a class="nav-link" href="../homeUser.html">Home</a>
+                    <a class="nav-link" href="search.html">Search</a> 
+                    <a class="nav-link" href="viewlist.html">View List</a>
+                    <a class="nav-link" href="apply.html">Apply</a>
+                    <a class="nav-link active" href="applied-jobs.html">My Applications</a>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
 
     <div class="container">
         <h2>My Applied Jobs</h2>
@@ -52,6 +70,7 @@
     </div>
 
     <script src="../scripts/applied-jobs.js"></script>
+    <script src="../scripts/global.js"></script>
 
 </body>
 
