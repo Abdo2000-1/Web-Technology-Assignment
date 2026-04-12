@@ -23,8 +23,7 @@
                 </div>
             </div>
             <div class="nav-right">
-                <button class="btn-login"><a href="sign-in.html">Login</a></button>
-                <button class="btn-signup"> <a href="sign-up.html">Sign Up</a> </button>
+              
             </div>
         </div>
     </nav>
@@ -33,7 +32,7 @@
     <div class="container">
         <h2>Apply for Job</h2>
 
-        <form id="job-form" novalidate>
+        <form id="job-form" onsubmit="handleSubmit(event)" novalidate>
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" placeholder="Enter your full name">
