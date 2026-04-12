@@ -1,5 +1,4 @@
-
-.Admin-navbar{
+.Admin-navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -8,7 +7,8 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid #e1e3e4;
 }
-.user-navbar{
+
+.user-navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,14 +28,20 @@
 }
 
 
-h1 a, h2 a, h3 a, .logo a, .footer-logo a ,.btn-login a, .btn-signup a {
+h1 a,
+h2 a,
+h3 a,
+.logo a,
+.footer-logo a,
+.btn-login a,
+.btn-signup a {
     font-family: 'Manrope', sans-serif;
     text-decoration: none;
     color: inherit;
 }
 
 .nav-left {
-   
+
     display: flex;
     align-items: center;
     gap: 32px;
@@ -89,4 +95,37 @@ h1 a, h2 a, h3 a, .logo a, .footer-logo a ,.btn-login a, .btn-signup a {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 80px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-weight: bold;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 0 12px;
+    font-size: 18px;
+    word-break: break-word;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.table th {
+    font-size: 22px;
+    background-color: #f5f5f5;
+    height: 70px;
 }

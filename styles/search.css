@@ -1,96 +1,189 @@
-    body {
-        font-family: 'Manrope', sans-serif;
+/* =============================================
+   LinkedOn — Search Page Styles
+   ============================================= */
 
-    }
-    .container {
-        max-width: 1280px;
-        margin-left: -150px;
-        padding: 100px ;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f2ef;
+    color: #1a1814;
+    min-height: 100vh;
+}
 
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 50;
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid #e1e3e4;
-    }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .nav-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 12px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+/* ---------- Navbar ---------- */
+.Admin-navbar,
+.user-navbar {
+    background-color: #f3f2ef;
+    padding: 0 32px;
+    border-bottom: 1px solid #e0ddd8;
+}
 
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 52px;
+}
 
-    h1 a, h2 a, h3 a, .logo a, .footer-logo a ,.btn-login a, .btn-signup a {
-        font-family: 'Manrope', sans-serif;
-        text-decoration: none;
-        color: inherit;
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo a {
+    color: #0891b2;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 12px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0891b2;
+}
+
+.nav-link.active {
+    color: #0891b2;
+    font-weight: 600;
+    border-bottom: 2px solid #0891b2;
+}
+
+/* ---------- Main Container ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 32px 40px;
+}
+
+/* ---------- Search Section ---------- */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-input {
+    width: 560px !important;
+    height: 48px !important;
+    margin: 0 !important;
+    padding: 0 18px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #1a1814;
+    background: #ffffff;
+    border: 1.5px solid #ddd9d0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: #7a766d;
+}
+
+.search-input:focus {
+    border-color: #0a95a8;
+    box-shadow: 0 0 0 3px rgba(10, 149, 168, 0.12);
+}
+
+/* Search Button */
+.search button,
+button {
+    height: 48px !important;
+    padding: 0 24px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #0a95a8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.search button:hover,
+button:hover {
+    background: #087e8f;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(10, 149, 168, 0.3);
+}
+
+.search button:active,
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+
+    .Admin-navbar,
+    .user-navbar {
+        padding: 0 16px;
     }
 
     .nav-left {
-    
-        display: flex;
-        align-items: center;
-        gap: 32px;
-    }
-
-    .logo {
-        font-weight: bold;
-        font-size: 24px;
-        color: #0891b2;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 24px;
+        gap: 12px;
     }
 
     .nav-link {
-        text-decoration: none;
-        color: #475569;
-        font-size: 14px;
-        transition: color 0.3s;
+        font-size: 13px;
+        padding: 5px 8px;
     }
 
-    .nav-link.active {
-        color: #0891b2;
-        font-weight: 600;
-        border-bottom: 2px solid #0891b2;
-        padding-bottom: 4px;
+    .container {
+        padding: 48px 16px 32px;
     }
 
-    .nav-right {
-        display: flex;
-        gap: 16px;
-        align-items: center;
+    .search {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
     }
 
-    .btn-login {
-        background: none;
-        border: none;
-        color: #475569;
-        font-weight: 500;
-        cursor: pointer;
+    .search-input {
+        width: 100% !important;
     }
 
-    .btn-signup {
-        background: linear-gradient(135deg, #00677f 0%, #2da7c9 100%);
-        color: #ffffff;
-        padding: 8px 24px;
-        border-radius: 9999px;
-        border: none;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    .search button {
+        width: 100%;
     }
+}
