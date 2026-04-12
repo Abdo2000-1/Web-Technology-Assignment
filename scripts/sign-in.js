@@ -19,7 +19,7 @@ toggleButton.type = 'button';
 toggleButton.textContent = '👁️';
 toggleButton.style.position = 'absolute';
 toggleButton.style.right = '8px';
-toggleButton.style.top = '50%';
+toggleButton.style.top = '36%';
 toggleButton.style.transform = 'translateY(-50%)';
 toggleButton.style.background = 'none';
 toggleButton.style.border = 'none';
@@ -32,7 +32,7 @@ wrapper.appendChild(toggleButton);
 toggleButton.addEventListener('click', function() {
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
     passwordInput.setAttribute('type', type);
-    this.textContent = type === 'password' ? '👁️' : '🙈';
+    this.textContent = type === 'password' ? '👁️' : '🫣';
 });
 
 // Original form submission

@@ -27,23 +27,25 @@ document.getElementById('toggleBothPw').addEventListener('click', function() {
     if (pw.type === 'password') {
         pw.type = 'text';
         confirmPw.type = 'text';
-        this.textContent = '🙈'; 
+        this.textContent = '🫣'; 
     } else {
         pw.type = 'password';
         confirmPw.type = 'password';
-        this.textContent = '👁'; 
+        this.textContent = '👁️'; 
     }
 });
 
 document.querySelector('form').addEventListener('submit', function(e) {
-    // Check if a role is selected
+    
+    e.preventDefault();
+
     if (!document.querySelector('input[name="role"]:checked')) {
         e.preventDefault();
         alert('Please select User or Admin');
         return;
     }
     
-    // Check if passwords match
+   
     let password = document.getElementById('password').value;
     let confirmPassword = document.getElementById('confirm-password').value;
     
@@ -53,7 +55,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
         return;
     }
     
-    // Check if admin is selected and company name is empty
+   
     let selectedRole = document.querySelector('input[name="role"]:checked').value;
     if (selectedRole === 'admin') {
         let companyName = document.getElementById('company').value.trim();
@@ -63,4 +65,14 @@ document.querySelector('form').addEventListener('submit', function(e) {
             return;
         }
     }
+
+
+
+
+if (selectedRole === 'admin') {
+    window.location.href = '../homeAdmin.html'; 
+} else if (selectedRole === 'user') {
+    window.location.href = '../homeUser.html'; 
+}
+
 });
