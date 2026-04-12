@@ -1,53 +1,67 @@
-# 🚀 LinkedOn - Web Technology Project
-> **مشروع بوابة التوظيف المتكاملة - مقرر IS231**
+# 🚀 LinkedOn - Web Technology Project 
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Course-IS231-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/University-Cairo%20University-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+</p>
 
 ---
 
-## 📑 Overview | نظرة عامة
-**English:** This project is a high-fidelity job search portal consisting of **8 comprehensive pages**. It showcases modern web layout techniques, responsive design, and professional UI/UX principles, developed as a core requirement for the **IS231** course.
+## 🌟 Overview
+A professional, high-fidelity job search portal developed as a core requirement for the **IS231** course at the Faculty of Computers and Artificial Intelligence (**FCAI**). The project consists of **8 comprehensive pages** designed with modern UI/UX principles.
 
-**بالعربية:** هذا المشروع عبارة عن بوابة توظيف متكاملة تتكون من **8 صفحات احترافية**. يستعرض المشروع تقنيات تخطيط الويب الحديثة، التصميم المتجاوب، ومبادئ تجربة المستخدم العالمية، وتم تطويره كمتطلب أساسي لمقرر **IS231**.
+## 🌟 نظرة عامة على المشروع
+بوابة توظيف احترافية متكاملة تم تطويرها كمتطلب أساسي لمقرر **IS231** في كلية الحاسبات والذكاء الاصطناعي (**FCAI**). يتكون المشروع من **8 صفحات شاملة** تم تصميمها وفق أحدث معايير تجربة المستخدم والواجهات العصرية.
 
 ---
 
 ## 🛠️ Technical Stack | التقنيات المستخدمة
 
-| Category | Technology |
+| Category / التصنيف | Technology / التقنية |
 | :--- | :--- |
 | **Frontend** | HTML5, CSS3, JavaScript |
-| **Design Tools** | Figma, DaVinci Resolve |
+| **Design Tools** | Figma & Adobe Suite |
 | **Version Control** | Git & GitHub |
-| **Hosting** | GitHub Pages |
 
 ---
 
-## 👥 Development Team | فريق العمل 
+## 👥 Development Team | فريق العمل
 
-| Name | Role | Focus Area |
-| :--- | :--- | :--- |
-| **Mohamed Tamer** | Lead Developer | Core Logic & Architecture |
-| **Ali Tarek** | UI/UX Designer | Visual Identity & Layout |
-| **Abd El-rahman Hassan** | Frontend Developer | Implementation & Styling |
-| **Abd El-rahman Hamdi** | Quality Assurance | Testing & Bug Fixing |
-| **Fathy Mostafa** | Content Strategist | Documentation & Assets |
-| **Mohamed Farag** | Integration Specialist | Component Linking |
+| Member Name / اسم العضو | Role / الدور |
+| :--- | :--- |
+| **Mohamed Tamer** | Lead Developer |
+| **Ali Tarek** | UI/UX Designer |
+| **Abd El-rahman Hassan** | Frontend Developer |
+| **Abd El-rahman Hamdi** | Quality Assurance |
+| **Fathy Mostafa** | Content Strategist |
+| **Mohamed Farag** | Integration Specialist |
 
 ---
 
 ## ✨ Key Features | المميزات الرئيسية
 
-* **🎯 Professional Layout:** 8 functional pages covering the entire recruitment lifecycle.
-* **📱 Fully Responsive:** Optimized for desktops, tablets, and mobile devices.
-* **🎨 Modern UI:** Sleek components inspired by top-tier professional networks.
-* **⚡ Optimized Performance:** Clean CSS and efficient DOM manipulation.
+### 🇬🇧 English
+* **🎯 8 Functional Pages:** Covering everything from Login to Job Listings and User Profiles.
+* **📱 Responsive Design:** Seamless experience across Mobile, Tablet, and Desktop.
+* **🎨 Premium UI:** Clean, minimalist, and professional aesthetics.
+* **⚡ Code Quality:** Semantic HTML and optimized CSS architecture.
+
+### 🇪🇬 العربية
+* **🎯 8 صفحات وظيفية:** تغطي كافة المراحل من تسجيل الدخول إلى قوائم الوظائف والملفات الشخصية.
+* **📱 تصميم متجاوب:** تجربة مستخدم سلسة على الجوال، التابلت، وأجهزة الكمبيوتر.
+* **🎨 واجهة مستخدم فاخرة:** جماليات نظيفة، بسيطة، واحترافية.
+* **⚡ جودة الكود:** استخدام HTML دلالي وبنية CSS محسنة.
 
 ---
 
-## 📂 Project Structure | هيكل المشروع
+## 📂 Project Structure | هيكل الملفات
 
 ```bash
-├── 📁 Assets            # Images and visual resources
-├── 📁 CSS               # Styling files (Modules & Global)
-├── 📁 JS                # Functional scripts
-├── 📄 index.html        # Main Landing Page
-└── 📄 [Other Pages]     # Profile, Jobs, Messages, etc.
+# Tree representation of the project
+.
+├── 📁 assets/          # Shared images and icons
+├── 📁 styles/          # CSS design modules
+├── 📁 scripts/         # Interactivity and Logic
+├── 📄 index.html       # Landing Page
+└── 📄 pages/           # Internal pages (Profile, Jobs, etc.)
