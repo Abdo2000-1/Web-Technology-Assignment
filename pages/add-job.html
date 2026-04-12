@@ -10,7 +10,7 @@
     
 </head>
 <body>
-<nav class="Admin-navbar" id="Admin-Nav">
+   <nav class="Admin-navbar" id="Admin-Nav">
         <div class="nav-container">
             <div class="nav-left">
                 <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
@@ -46,8 +46,9 @@
         </div>
     </nav>
 
+
 <form method="post" onsubmit="return validateForm(event)">
-    <h2 style = "text-align: center; color: rgba(45, 167, 201, 0.89); font-weight: 500;  border-bottom: 2px solid #e9ecef; padding-bottom: 1rem;">Add Job</h2>
+    <h2 style = "text-align: center; color: rgba(45, 167, 201, 0.89); font-weight: 500;  border-bottom: 3px solid #e9ecef; padding-bottom: 1rem;">Add Job</h2>
     <label for="jobTitle">Job Title: <span style="color: red;">*</span></label><br>
     <input type="text" id="jobTitle" name="jobTitle" placeholder="Please Enter your job title" style="width: 250px; height: 20px;"><br><br>
 
@@ -61,7 +62,7 @@
     <input type="text" id="salary" name="salary" placeholder="Please Enter salary" style="width: 250px; height: 20px;"><br><br>
 
     <label for="status">Status:</label><br>
-    <select  name="status" style="width: 250px; height: 30px;">
+    <select id="status" name="status" style="width: 250px; height: 30px;">
         <option value="open">Open</option>
         <option value="closed">Closed</option>
     </select><br><br>
@@ -74,7 +75,6 @@
 
 <script src="../scripts/add-job.js"></script>
 <script src="../scripts/global.js"></script>
-
 
 </body>
 </html>
