@@ -30,12 +30,12 @@ A professional, high-fidelity job search portal developed as a core requirement 
 
 | Member Name / اسم العضو | Role / الدور |
 | :--- | :--- |
-| **Mohamed Tamer** | Lead Developer |
-| **Ali Tarek** | UI/UX Designer |
-| **Abd El-rahman Hassan** | Frontend Developer |
-| **Abd El-rahman Hamdi** | Quality Assurance |
-| **Fathy Mostafa** | Content Strategist |
-| **Mohamed Farag** | Integration Specialist |
+| **Mohamed Tamer** |  |
+| **Ali Tarek** |  |
+| **Abd El-rahman Hassan** |  |
+| **Abd El-rahman Hamdi** |  |
+| **Fathy Mostafa** |  |
+| **Mohamed Farag** |  |
 
 ---
 
