@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/home.css">
 </head>
+
 <body>
 
-<nav class="Admin-navbar" id="Admin-Nav">
+    <nav class="Admin-navbar" id="Admin-Nav">
         <div class="nav-container">
             <div class="nav-left">
                 <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
                 <span class="logo"><a href="../homeAdmin.html">LinkedOn</a></span>
                 <div class="nav-links">
                     <a class="nav-link" href="../homeAdmin.html">Home</a>
-                    <a class="nav-link" href="search.html">Search</a> 
+                    <a class="nav-link" href="search.html">Search</a>
                     <a class="nav-link" href="viewlist.html">View List</a>
                     <a class="nav-link active" href="admin-jobs.html">Edit and Delete Job</a>
                     <a class="nav-link" href="add-job.html">Add Job</a>
@@ -29,14 +31,14 @@
         </div>
     </nav>
 
-     <nav class="user-navbar" id="User-Nav">
+    <nav class="user-navbar" id="User-Nav">
         <div class="nav-container">
             <div class="nav-left">
                 <!-- <img class="LinkedOn-icon" src="images/icon .png" alt="LinkedOn Icon"> -->
                 <span class="logo"><a href="../homeUser.html">LinkedOn</a></span>
                 <div class="nav-links">
                     <a class="nav-link" href="../homeUser.html">Home</a>
-                    <a class="nav-link" href="search.html">Search</a> 
+                    <a class="nav-link" href="search.html">Search</a>
                     <a class="nav-link active" href="viewlist.html">View List</a>
                     <a class="nav-link" href="apply.html">Apply</a>
                     <a class="nav-link" href="applied-jobs.html">My Applications</a>
@@ -48,49 +50,50 @@
     </nav>
     <div class="cards">
 
-    <div class="card">
-        <p class="title">TOTAL JOBS</p>
-        <h2>42</h2>
-        <span class="small">+4 this month</span>
+        <div class="card">
+            <p class="title">TOTAL JOBS</p>
+            <h2>42</h2>
+            <span class="small">+4 this month</span>
+        </div>
+
+        <div class="card">
+            <p class="title">TOTAL APPLICATIONS</p>
+            <h2>1,284</h2>
+            <span class="small">+12%</span>
+        </div>
+
+        <div class="card">
+            <p class="title">ACTIVE LISTINGS</p>
+            <h2>18</h2>
+            <span class="small">84% fill rate</span>
+        </div>
+
+        <div class="card highlight">
+            <p class="title">AVG. TIME TO HIRE</p>
+            <h2>14d</h2>
+            <span class="small">Target: 20d</span>
+        </div>
+
     </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>salary</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
 
-    <div class="card">
-        <p class="title">TOTAL APPLICATIONS</p>
-        <h2>1,284</h2>
-        <span class="small">+12%</span>
-    </div>
+        <tbody id="jobTableBody">
 
-    <div class="card">
-        <p class="title">ACTIVE LISTINGS</p>
-        <h2>18</h2>
-        <span class="small">84% fill rate</span>
-    </div>
+        </tbody>
+    </table>
 
-    <div class="card highlight">
-        <p class="title">AVG. TIME TO HIRE</p>
-        <h2>14d</h2>
-        <span class="small">Target: 20d</span>
-    </div>
-
-</div>
- <table border="1">
-    <thead>
-        <tr>
-            <th>Job Title</th>
-            <th>Company</th>
-            <th>Location</th>
-            <th>salary</th>
-            <th>Status</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-
-    <tbody id="jobTableBody">
-
-    </tbody>
-</table>
-
-<script src="../scripts/global.js"></script>
+    <script src="../scripts/global.js"></script>
 
 </body>
+
 </html>

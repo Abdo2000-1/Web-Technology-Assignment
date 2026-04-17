@@ -1,12 +1,11 @@
-function applyNavigationRole() 
-{
+function applyNavigationRole() {
     const data = localStorage.getItem('loggedInUser');
 
     if (!data) return;
 
     const user = JSON.parse(data);
 
-   
+
     const adminNav = document.getElementById('Admin-Nav');
     const userNav = document.getElementById('User-Nav');
 

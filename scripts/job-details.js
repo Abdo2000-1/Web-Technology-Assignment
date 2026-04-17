@@ -21,32 +21,29 @@ function renderJobs() {
                 </span>
             </p>
 
-          
-
-            <span class="details-btn"">
-                View Details
-            </span>
-            &nbsp;
-            <a href="apply.html">Apply Now</a>
+        <div class="job-actions">
+            <span class="details-btn">View Details</span>
+            <a href="apply.html?job=${encodeURIComponent(job.jobTitle)}" class="apply-btn">Apply Now</a>
+            </div>
 
             <div class="details">
                 <p><strong>Salary:</strong> $${job.salary}</p>
                 <p><strong>Date Added:</strong> ${job.dateAdded}</p>
-                  <p><strong>description: <br></strong>${job.description || "No description available"}</p>
+                <p><strong>description: <br></strong>${job.description || "No description available"}</p>
             </div>
         `;
 
         container.appendChild(jobDiv);
     });
 
-    addToggle();
+    
 }
 
 function addToggle() {
     document.querySelectorAll(".details-btn").forEach(btn => {
         btn.addEventListener("click", function () {
 
-            let details = this.parentElement.querySelector(".details");
+            let details = this.closest(".job").querySelector(".details");
 
             document.querySelectorAll(".details").forEach(d => {
                 if (d !== details) d.style.display = "none";
@@ -57,5 +54,5 @@ function addToggle() {
         });
     });
 }
-
 renderJobs();
+addToggle();

@@ -1,25 +1,82 @@
 body {
-font-family: Arial;
-background: #f5f7fa;
-margin: 0;
+    font-family: Arial;
+    background: #f5f7fa;
+    margin: 0;
 }
 
 .container {
-width: 900px;
-margin: auto;
-padding: 40px;
-background: white;
+    width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
 }
 
 h2 {
-text-align: center;
-color: #2da7c9;
+    text-align: center;
+    color: #2da7c9;
 }
 
 .subtitle {
-text-align: center;
-color: #666;
+    text-align: center;
+    color: #666;
 }
+
+
+.job {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* action container */
+.job-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* details button */
+.details-btn {
+    padding: 8px 14px;
+    background: #eef7fb;
+    color: #2da7c9;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #cce7f0;
+}
+
+.details-btn:hover {
+    background: #2da7c9;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* apply button */
+.apply-btn {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #2da7c9, #0891b2);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    background: linear-gradient(135deg, #248ea8, #066f86);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    background: #eef7fb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 .user-navbar {
     position: fixed;
@@ -109,37 +166,3 @@ h3 a,
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-
-.job {
-border: 1px solid #ddd;
-padding: 20px;
-margin-top: 20px;
-border-radius: 8px;
-}
-
-.open {
-color: green;
-}
-
-.closed {
-color: red;
-}
-
-.closed-text {
-color: #777;
-}
-
-.details-btn {
-color: #2da7c9;
-cursor: pointer;
-text-decoration: underline;
-margin-right: 10px;
-}
-
-.details {
-display: none;
-margin-top: 10px;
-background: #eef7fb;
-padding: 10px;
-border-radius: 5px;
-}

@@ -1,13 +1,12 @@
 function validateForm(event) {
+    event.preventDefault();
 
-
-   
     const jobTitle = document.getElementById('jobTitle').value.trim();
     const company = document.getElementById('company').value.trim();
     const location = document.getElementById('location').value.trim();
     const salary = document.getElementById('salary').value.trim();
     const status = document.getElementById('status').value;
-    const description = document.getElementById('description').value.trim();
+    const description = document.getElementById('description').value;
 
 
     if (!jobTitle || !company || !location || !salary) {
@@ -32,7 +31,7 @@ function validateForm(event) {
         dateAdded: new Date().toLocaleDateString()
     };
 
-    
+
     const existingJobs = JSON.parse(localStorage.getItem('jobs')) || [];
 
     existingJobs.push(newJob);
@@ -40,6 +39,7 @@ function validateForm(event) {
     localStorage.setItem('jobs', JSON.stringify(existingJobs));
 
     alert('Job added successfully!');
-    
+    window.location.href = "admin-jobs.html";
+
     return true;
 }

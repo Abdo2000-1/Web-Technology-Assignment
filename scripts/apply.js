@@ -8,7 +8,13 @@ let titles = document.querySelector("#jobTitle");
 jobs.forEach((part) => {
     titles.innerHTML += `<option value="${part.jobTitle}">${part.jobTitle}</option>`;
 });
-    
+const urlParams = new URLSearchParams(window.location.search);
+const selectedJobFromUrl = urlParams.get('job');
+
+if (selectedJobFromUrl) {
+    titles.value = selectedJobFromUrl;
+}
+
 
 // box click
 box.addEventListener("click", () => {
@@ -84,7 +90,7 @@ function handleSubmit(e) {
     }
 
     if (valid) {
-        saveApplication(job,name,email,exp);
+        saveApplication(job, name, email, exp);
     }
 }
 
@@ -102,13 +108,13 @@ function hideError(id) {
 
 }
 // save application to localStorage
-function saveApplication(jobTitle,name,email,exp) {
+function saveApplication(jobTitle, name, email, exp) {
     let apps = JSON.parse(localStorage.getItem("applications")) || [];
 
     let app = {
-        name : name,
-        email : email,
-        exp : exp,
+        name: name,
+        email: email,
+        exp: exp,
         job: jobTitle,
         date: new Date().toLocaleDateString(),
         status: "Pending"
@@ -120,7 +126,7 @@ function saveApplication(jobTitle,name,email,exp) {
     // Show success message and redirect
     let submitBtn = document.querySelector(".submit-btn");
     submitBtn.innerText = "Applied Successfully! Redirecting...";
-    submitBtn.style.backgroundColor = "#28a745"; 
+    submitBtn.style.backgroundColor = "#28a745";
     submitBtn.disabled = true;
     submitBtn.style.cursor = "not-allowed";
     setTimeout(() => {

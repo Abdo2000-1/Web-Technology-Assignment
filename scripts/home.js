@@ -1,4 +1,4 @@
-// <!-- Error --> السطر اللي موجود في هتمل 156
+// Error
 document.addEventListener('DOMContentLoaded', () => {
     
 

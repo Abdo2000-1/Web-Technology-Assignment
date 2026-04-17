@@ -1,47 +1,40 @@
 const tbody = document.getElementById("jobs-table-body");
 
-//recall the saved applications from localStorage
+// Data Gathering
 let savedApps = JSON.parse(localStorage.getItem("applications")) || [];
+let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
-let allApps = savedApps.map(app => ({
-    job: app.job,
-    company: "Your Selected Company",
-    date: app.date,
-    status: app.status
-}));
+let allApps = savedApps.map(app => {
+    let job = jobs.find(j => j.jobTitle === app.job);
 
-// view table
+    return {
+        job: app.job,
+        company: job?.company || "Unknown",
+        date: app.date,
+        status: app.status
+    };
+});
+
+// show data in table
 function renderTable(data) {
     tbody.innerHTML = "";
 
-    if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5">No applications yet</td></tr>`;
+    if (!data.length) {
+        tbody.innerHTML = `<tr><td colspan="4">No applications yet</td></tr>`;
         return;
     }
 
     data.forEach(app => {
-        const tr = document.createElement("tr");
-
-        let statusClass = "";
-        switch (app.status.toLowerCase()) {
-            case "pending": statusClass = "status-pending"; break;
-            case "accepted": statusClass = "status-accepted"; break;
-            case "reviewed": statusClass = "status-reviewed"; break;
-            case "rejected": statusClass = "status-rejected"; break;
-            default: statusClass = "status-pending";
-        }
-
-        tr.innerHTML = `
-            <td>${app.job}</td>
-            <td>${app.company}</td>
-            <td>${app.date}</td>
-            <td class="${statusClass}">${app.status}</td>
-         
+        tbody.innerHTML += `
+            <tr>
+                <td>${app.job}</td>
+                <td>${app.company}</td>
+                <td>${app.date}</td>
+                <td class="status-${app.status.toLowerCase()}">
+                    ${app.status}
+                </td>
+            </tr>
         `;
-
-        tbody.appendChild(tr);
     });
 }
-
-// show data
 renderTable(allApps);

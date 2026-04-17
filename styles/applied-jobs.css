@@ -70,18 +70,6 @@ tbody tr:hover {
     color: red;
     font-weight: bold;
 }
-
-.action-link {
-    color: #2da7c9;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.action-link:hover {
-    text-decoration: underline;
-    color: #248ea8;
-}
-
 .no-data {
     text-align: center;
     color: #888;
