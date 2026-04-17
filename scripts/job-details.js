@@ -9,6 +9,9 @@ function renderJobs() {
 
         let jobDiv = document.createElement("div");
         jobDiv.classList.add("job");
+
+        const status = (job.status || "open").toLowerCase().trim();
+        const isClosed = status === "closed";
         jobDiv.innerHTML = `
             <h3>${index + 1}. ${job.jobTitle}</h3>
 
@@ -22,8 +25,13 @@ function renderJobs() {
             </p>
 
         <div class="job-actions">
-            <span class="details-btn">View Details</span>
-            <a href="apply.html?job=${encodeURIComponent(job.jobTitle)}" class="apply-btn">Apply Now</a>
+           <button class="details-btn" onclick="toggleDetails(this)">View Details </button>
+           ${isClosed
+                ? ''
+                : `<a href="apply.html?job=${encodeURIComponent(job.jobTitle)}" class="apply-btn">
+                                Apply Now
+                           </a>`
+            }
             </div>
 
             <div class="details">
@@ -36,7 +44,7 @@ function renderJobs() {
         container.appendChild(jobDiv);
     });
 
-    
+
 }
 
 function addToggle() {
