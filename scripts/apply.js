@@ -1,6 +1,14 @@
 
 let box = document.getElementById("uploadBox");
 let input = document.getElementById("fileInput");
+let jobs = JSON.parse(localStorage.getItem("jobs"));
+let titles = document.querySelector("#jobTitle");
+
+
+jobs.forEach((part) => {
+    titles.innerHTML += `<option value="${part.jobTitle}">${part.jobTitle}</option>`;
+});
+    
 
 // box click
 box.addEventListener("click", () => {
