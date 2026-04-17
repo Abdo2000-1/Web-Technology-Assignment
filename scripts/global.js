@@ -1,27 +1,19 @@
+function applyNavigationRole() 
+{
+    const data = localStorage.getItem('loggedInUser');
 
+    if (!data) return;
 
-function applyNavigationRole() {
-  
-    const storedUser = localStorage.getItem('loggedInUser');
-    
+    const user = JSON.parse(data);
 
-    if (!storedUser) {
-        console.warn("No logged-in user found.");
-        return; 
-    }
-
-    const user = JSON.parse(storedUser);
-  
+   
     const adminNav = document.getElementById('Admin-Nav');
     const userNav = document.getElementById('User-Nav');
 
-    if (user.role === 'admin') {
-        if (adminNav) adminNav.style.display = 'block';
-        if (userNav) userNav.style.display = 'none';
-    } else {
-        if (userNav) userNav.style.display = 'block';
-        if (adminNav) adminNav.style.display = 'none';
-    }
-}
 
+    const isAdmin = user.role === 'admin';
+
+    if (adminNav) adminNav.style.display = isAdmin ? 'block' : 'none';
+    if (userNav) userNav.style.display = isAdmin ? 'none' : 'block';
+}
 document.addEventListener('DOMContentLoaded', applyNavigationRole);

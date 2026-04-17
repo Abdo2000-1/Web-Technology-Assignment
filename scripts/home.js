@@ -1,27 +1,18 @@
+// <!-- Error --> السطر اللي موجود في هتمل 156
+document.addEventListener('DOMContentLoaded', () => {
+    
 
-// Error
-document.addEventListener('DOMContentLoaded', function() {
-    const lockedLinks = document.querySelectorAll('.not-signed-in');
     const modal = document.getElementById('customModal');
-    const closeBtn = document.getElementById('closeModal');
+    document.onclick = (e) => {
+        
 
-  
-    lockedLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); 
-            modal.style.display = 'flex'; 
-        });
-    });
-
-    
-    closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+        if (e.target.classList.contains('not-signed-in')) {
+            e.preventDefault();
+            modal.style.display = 'flex';
         }
-    }
+
+        if (e.target.id === 'closeModal' || e.target === modal) {
+            modal.style.display = 'none'; 
+        }
+    };
 });
