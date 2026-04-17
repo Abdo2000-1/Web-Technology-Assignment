@@ -36,7 +36,7 @@ function renderTable(data) {
             <td>${app.company}</td>
             <td>${app.date}</td>
             <td class="${statusClass}">${app.status}</td>
-            <td><a href="job-details.html">Show Details</a></td>
+         
         `;
 
         tbody.appendChild(tr);
